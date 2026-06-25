@@ -148,6 +148,17 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }, 100);
 
+  // Trigger editorial hero animations
+  setTimeout(() => {
+    const titles = document.querySelectorAll('.editorial-title');
+    const descs = document.querySelectorAll('.editorial-desc');
+    const scrollInd = document.querySelector('.scroll-indicator');
+    
+    titles.forEach(title => title.classList.add('animated'));
+    descs.forEach(desc => desc.classList.add('animated'));
+    if (scrollInd) scrollInd.classList.add('animated');
+  }, 200);
+
   // ==========================================================================
   // SKILLS PROGRESS BAR ANIMATION
   // ==========================================================================
